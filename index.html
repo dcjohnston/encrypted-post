@@ -12,110 +12,102 @@
           <h3>NYS Syringe Exchange Program ID</h3>
           <div class="form-item field text required">
             <label class="title">The First Letter of your Last Name</label>
-            <input class="field-element text" name="last_name_letter" />
+            <input class="field-element text" name="last_name_letter" required maxlength=1/>
           </div>
           <div class="form-item field text required">
             <label class="title">The First Letter of your First Name</label>
-            <input class="field-element text" name="first_name_letter" />
+            <input class="field-element text" name="first_name_letter" required maxlength=1/>
           </div>
           <div class="form-item field text required">
-            <label class="title">The First Initial of Your Mother's First Name</label>
-            <input class="field-element text" name="mother_first_name_letter" />
+            <label class="title">The First Letter of Your Mother's First Name</label>
+            <input class="field-element text" name="mother_first_name_letter" required maxlength=1/>
           </div>
-          <fieldset class="form-item fields date">
-              <div class="title">Date of Birth</div>
-              <legend>Date of Birth</legend>
-              <div class="field month two-digits">
-                <label class="caption"><input class="field-element" type="text" maxlength="2" data-title="Month" name="dob_month" />
-                  MM</label>
-              </div>
-              <div class="field day two-digits">
-                <label class="caption"><input class="field-element" type="text" maxlength="2" data-title="Day" name="dob_day" />
-                  DD</label>
-              </div>
-              <div class="field year four-digits">
-                <label class="caption"><input class="field-element" type="text" maxlength="4" data-title="Year" name="dob_year" />
-                  YYYY</label>
-              </div>
-          </fieldset>
+          <div class="form-item field required">
+              <label class="title">Your Date of Birth</label>
+              <input type="date" name="dob" required> </input>
+          </div>
           <div class="form-item field radio required">
-            <label class="title required">Gender</label>
-            <div class="option">
-              <label>
-                <input type="radio" name="gender" value="woman" /> Female - Identify as a Woman
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="radio" name="gender" value="man" /> Male - Identify as a Man
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="radio" name="gender" value="transwoman" /> Transgender - Identify as a Woman
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="radio" name="gender" value="transman" /> Transgender - Identify as a Man
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="radio" name="gender" value="genderqueer_bornfemale" /> Born female - Identify as Genderqueer
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="radio" name="gender" value="genderqueer_bornmale" /> Born male - Identify as Genderqueer
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="radio" name="gender" value="other" /> Other <input class="field-element text" name="genderother" />
-              </label>
-            </div>
+            <fieldset required>
+                <label class="title required">Gender</label>
+                <div class="option">
+                  <label>
+                    <input type="radio" name="gender" value="woman" required/> Female - Identify as a Woman
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="radio" name="gender" value="man"/> Male - Identify as a Man
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="radio" name="gender" value="transwoman"/> Transgender - Identify as a Woman
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="radio" name="gender" value="transman" /> Transgender - Identify as a Man
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="radio" name="gender" value="genderqueer_bornfemale" /> Born female - Identify as Genderqueer
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="radio" name="gender" value="genderqueer_bornmale" /> Born male - Identify as Genderqueer
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="radio" name="gender" value="other" /> Other <input class="field-element text" name="genderother" />
+                  </label>
+                </div>
+            </fieldset>
           </div>
 
           <div class="form-item field checkbox required">
-            <label class="title">My race/ethnicity could be characterized as</label>
-            <div class="option">
-              <label>
-               <input type="checkbox" name="raceethnicity_black" value="African American/Black" />
-               African American/ Black
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="checkbox" name="raceethnicity_latinx" value="Latino/ Latina/ Latinx" />
-                Latino/ Latina/ Latinx
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="checkbox" name="raceethnicity_white" value="Caucasian/ White" />
-                Caucasian/ White
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="checkbox" name="raceethnicity_nativeamerican" value="Native American" />
-                Native American
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="checkbox" name="raceethnicity_api" value="Asian or Pacific Islander" />
-                Asian or Pacific Islander
-              </label>
-            </div>
-            <div class="option">
-              <label>
-                <input type="checkbox"/>
-                Other
-                <input class="field-element text" name="raceethnicity_other" />
-              </label>
-            </div>
+            <fieldset>
+                <label class="title">My race/ethnicity could be characterized as</label>
+                <div class="option">
+                  <label>
+                   <input type="checkbox" name="raceethnicity_black" value="African American/Black" />
+                   African American/ Black
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="checkbox" name="raceethnicity_latinx" value="Latino/ Latina/ Latinx" />
+                    Latino/ Latina/ Latinx
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="checkbox" name="raceethnicity_white" value="Caucasian/ White" />
+                    Caucasian/ White
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="checkbox" name="raceethnicity_nativeamerican" value="Native American" />
+                    Native American
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="checkbox" name="raceethnicity_api" value="Asian or Pacific Islander" />
+                    Asian or Pacific Islander
+                  </label>
+                </div>
+                <div class="option">
+                  <label>
+                    <input type="checkbox"/>
+                    Other
+                    <input class="field-element text" name="raceethnicity_other" />
+                  </label>
+                </div>
+            </fieldset>
           </div>
           <h3>The following questions are also required for program enrollment</h3>
           <div class="form-item field radio required">
